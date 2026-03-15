@@ -1,0 +1,66 @@
+[
+    {
+        "34296676": [
+            [
+                "Article Title",
+                "\"Vaccine effectiveness against symptomatic SARS-CoV-2 infection in adults aged 65 years and older in primary care: I-MOVE-COVID-19 project, Europe, December 2020 to May 2021.\""
+            ],
+            [
+                "Journal",
+                "Euro surveillance : bulletin Europeen sur les maladies transmissibles = European communicable disease bulletin"
+            ],
+            [
+                "Volume",
+                "26(29)"
+            ],
+            [
+                "Date",
+                "(Jul. 2021). "
+            ],
+            [
+                "PMID",
+                "34296676"
+            ],
+            [
+                "DOI",
+                "10.2807/1560-7917.ES.2021.26.29.2100670"
+            ],
+            [
+                "Abstract",
+                "We measured COVID-19 vaccine effectiveness (VE) against symptomatic SARS-CoV-2 infection at primary care/outpatient level among adults ≥ 65 years old using a multicentre test-negative design in eight European countries. We included 592 SARS-CoV-2 cases and 4,372 test-negative controls in the main analysis. The VE was 62% (95% CI: 45-74) for one dose only and 89% (95% CI: 79-94) for complete vaccination. COVID-19 vaccines provide good protection against COVID-19 presentation at primary care/outpatient level, particularly among fully vaccinated individuals."
+            ]
+        ]
+    },
+    {
+        "34550021": [
+            [
+                "Article Title",
+                "\"Serological Testing Reveals the Hidden COVID-19 Burden among Health Care Workers Experiencing a SARS-CoV-2 Nosocomial Outbreak.\""
+            ],
+            [
+                "Journal",
+                "Microbiology spectrum"
+            ],
+            [
+                "Volume",
+                "9(2)"
+            ],
+            [
+                "Date",
+                "(Oct. 2021). "
+            ],
+            [
+                "PMID",
+                "34550021"
+            ],
+            [
+                "DOI",
+                "10.1128/Spectrum.01082-21"
+            ],
+            [
+                "Abstract",
+                "We describe the results of testing health care workers, from a tertiary care hospital in Japan that had experienced a coronavirus disease 2019 (COVID-19) outbreak during the first peak of the pandemic, for severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2)-specific antibody seroconversion. Using two chemiluminescent immunoassays and a confirmatory surrogate virus neutralization test, serological testing revealed that a surprising 42% of overlooked COVID-19 diagnoses (27/64 cases) occurred when case detection relied solely on SARS-CoV-2 nucleic acid amplification testing (NAAT). Our results suggest that the NAAT-positive population is only the tip of the iceberg and the portion left undetected might potentially have led to silent transmissions and triggered the spread. A questionnaire-based risk assessment was further indicative of exposures to specific aerosol-generating procedures (i.e., noninvasive ventilation and airway suctioning) having mediated transmission and served as the origins of the outbreak. Our observations are supportive of a multitiered testing approach, including the use of serological diagnostics, in order to accomplish exhaustive case detection along the whole COVID-19 spectrum. IMPORTANCE We describe the results of testing frontline health care workers, from a hospital in Japan that had experienced a COVID-19 outbreak, for SARS-CoV-2-specific antibodies. Antibody testing revealed that a surprising 42% of overlooked COVID-19 diagnoses occurred when case detection relied solely on PCR-based viral detection. COVID-19 clusters have been continuously striking the health care system around the globe. Our findings illustrate that such clusters are lined with hidden infections eluding detection with diagnostic PCR and that the cluster burden in total is more immense than actually recognized. The mainstays of diagnosing infectious diseases, including COVID-19, generally consist of two approaches, one aiming to detect molecular fragments of the invading pathogen and the other to measure immune responses of the host. Considering antibody testing as one trustworthy option to test our way through the pandemic can aid in the exhaustive case detection of COVID-19 patients with variable presentations."
+            ]
+        ]
+    }
+]

@@ -1,0 +1,138 @@
+[
+    {
+        "AB1": [
+            [
+                "BACKGROUND",
+                "The efficacy and safety of regular-strength beclomethasone dipropionate MDI prescribed within its recommended dosing range of 2 to 5 puffs three to four times daily has been well established in more than 25 years of worldwide use."
+            ],
+            [
+                "BACKGROUND",
+                "A more concentrated formulation delivering 84 microg per puff was developed to provide for a more convenient twice-daily dosing regimen."
+            ],
+            [
+                "METHODS",
+                "This randomized , single-blinded , positive and placebo-controlled , parallel-group , multiple-dose bioactivity study was conducted to assess the potential of a new beclomethasone dipropionate 84 microg double-strength metered-dose inhaler ( Vanceril 84 microg Double Strength Inhalation Aerosol/Key ) to cause hypothalamic-pituitary-adrenocortical axis suppression."
+            ],
+            [
+                "METHODS",
+                "Beclomethasone dipropionate double-strength 84 microg was compared with beclomethasone dipropionate regular-strength 42 microg , orally administered prednisone , and placebo inhaler after 36 consecutive days of administration in adults with moderate asthma."
+            ],
+            [
+                "METHODS",
+                "Beclomethasone dipropionate double-strength was administered as 5 puffs BID and beclomethasone dipropionate regular-strength was administered as 10 puffs BID for the same total daily dose of 840 microg of beclomethasone dipropionate."
+            ],
+            [
+                "METHODS",
+                "Oral prednisone was administered by mouth at 10 mg once a day."
+            ],
+            [
+                "METHODS",
+                "The potential for hypothalamic-pituitary-adrenocortical axis suppression was evaluated by an adrenocorticotropic hormone ( ACTH ) stimulation test using cosyntropin 250 microg in 500 mL normal saline infused over six hours on the 36th day of treatment."
+            ],
+            [
+                "RESULTS",
+                "Sixty-four patients completed this study."
+            ],
+            [
+                "RESULTS",
+                "No clinically significant post-study findings were observed from physical examination , electrocardiogram , or clinical laboratory evaluation for any treatment group."
+            ],
+            [
+                "RESULTS",
+                "No serious or unexpected adverse events were reported."
+            ],
+            [
+                "RESULTS",
+                "On the 36th day of treatment , there was a significant ( P < .01 ) difference in the plasma cortisol concentration response to cosyntropin stimulation between the prednisone and placebo treatment groups at the sixth hour of infusion."
+            ],
+            [
+                "RESULTS",
+                "There was no significant difference in the plasma cortisol concentration response to cosyntropin stimulation between the beclomethasone dipropionate double-strength and beclomethasone dipropionate regular-strength treatment groups and the placebo group."
+            ],
+            [
+                "RESULTS",
+                "In addition , comparison of the response between the beclomethasone dipropionate double-strength and beclomethasone dipropionate regular-strength groups showed no significant difference."
+            ],
+            [
+                "CONCLUSIONS",
+                "Beclomethasone dipropionate , administered either via a double-strength ( 84 microg/puff ) or regular-strength ( 42 microg/puff ) inhaler dosed at 840 microg/day showed no evidence of hypothalamic-pituitary-adrenocortical axis suppression in adults with moderate asthma."
+            ]
+        ]
+    },
+    {
+        "AB2": [
+            [
+                "CONCLUSIONS",
+                "Prevalent models based on artificial neural net-work (ANN) for sentence classification oftenclassify sentences in isolation without con-sidering the context in which sentences ap-pear."
+            ],
+            [
+                "CONCLUSIONS",
+                "This hampers the traditional sentenceclassification approaches to the problem of se-quential sentence classification, where struc-tured prediction is needed for better overallclassification performance."
+            ],
+            [
+                "CONCLUSIONS",
+                "In this work, wepresent a hierarchical sequential labeling net-work to make use of the contextual informa-tion within surrounding sentences to help clas-sify the current sentence."
+            ],
+            [
+                "CONCLUSIONS",
+                "Our model outper-forms the state-of-the-art results by 2%-3% ontwo benchmarking datasets for sequential sen-tence classification in medical scientific ab-stracts."
+            ]
+        ]
+    },
+    {
+        "AB3": [
+            [
+                "OBJECTIVE",
+                "To compare the efficacy and safety of 250 microg and 500 microg of recombinant hCG with 10,000 U USP of urinary hCG in assisted reproduction technology."
+            ],
+            [
+                "METHODS",
+                "Open, comparative, randomized, prospective clinical study."
+            ],
+            [
+                "METHODS",
+                "Twenty tertiary care U.S. infertility centers."
+            ],
+            [
+                "METHODS",
+                "Two hundred ninety-seven ovulatory infertile women undergoing a single cycle of assisted reproduction technology."
+            ],
+            [
+                "METHODS",
+                "Patients were randomized 1:1:1 to 250 microg of recombinant hCG SC, 500 microg of recombinant hCG SC, or 10,000 U USP urinary hCG IM after completing gonadotropin stimulation."
+            ],
+            [
+                "METHODS",
+                "Number of oocytes retrieved per patient receiving hCG."
+            ],
+            [
+                "METHODS",
+                "Also, measures of oocyte maturity, embryo development, and luteal function, as well as pregnancy and pregnancy outcome."
+            ],
+            [
+                "METHODS",
+                "Adverse safety events, laboratory changes, local tolerance, and immunogenicity were also assessed."
+            ],
+            [
+                "RESULTS",
+                "Mean numbers of oocytes retrieved per treatment group were equivalent, 13.6, 14.6, and 13.7 with 250 microg of recombinant hCG, 500 microg of recombinant hCG, and urinary hCG, respectively."
+            ],
+            [
+                "RESULTS",
+                "The numbers of 2PN fertilized oocytes on day 1 after oocyte retrieval, and 2PN or cleaved embryos on the day of embryo transfer, were significantly higher with 500 microg of recombinant hCG than with the lower dose."
+            ],
+            [
+                "RESULTS",
+                "However, the incidence of adverse events also tended to be higher with this dose."
+            ],
+            [
+                "CONCLUSIONS",
+                "Recombinant hCG is effective and well tolerated in the induction of final follicular maturation and luteinization in women undergoing assisted reproduction technology."
+            ],
+            [
+                "CONCLUSIONS",
+                "Recombinant hCG (250 microg) SC is equivalent to 10,000 U USP of urinary hCG in this indication."
+            ]
+        ]
+    }
+]

@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block css %}
+
+    <style>
+        
+        .about_text {
+            font-family: Courier;
+            color: white;
+            /* background-color: lightgrey; */
+            width: 50%;
+            /* border: 5% solid green; */
+            /* padding: 5%; */
+            margin-left: 25%;
+            margin-right: 25%;
+        }
+        
+        .lead{
+            text-align:justify;
+            font-family: Courier;
+            color: white;
+        }
+        
+        a:link { text-decoration: none; }
+        a:visited { text-decoration: none; }
+        a:hover { text-decoration: none; }
+        a:active { text-decoration: none; }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+
+    <div class="about_text">
+        <h1><strong>About</strong></h1>
+        <p class="lead">
+            Welcome to the <em> "It's all about abstracts" </em> or <em> "3A" </em> framework. 
+            <br>
+            <br>
+            Part of it was created as a demo for my MSc diploma thesis titled "Sentence Classification with Hierarchical Neural Networks for Rhetorical Sections
+            Extraction". It was designed to give the user the functionality of a neural network trained for the Natural Language Processing (NLP) task of Sentence Classification on scientific abstracts. 
+            <br>
+            <br>
+            Guidelines for the scraper:
+            <br>
+            Frequency: Please do not post more than three URL requests per second. <br>
+            Timing: Please try to limit large jobs to either weekends or between 9:00 PM and 5:00 AM Eastern time during weekdays.<br>
+            Quantity: For some utilities (like ESearch, EFetch, and ESummary), there are limits to how many records can be retrieved with a single URL. For example, each ESearch URL can only retrieve up to 100,000 UIDs. If you wish to exceed these limits, you can use the retstart/retmax parameters, or the NCBI History server.<br>
+            <br>
+            <br>
+            <u> Contact </u>
+            <br>
+            <a href="mailto:a.ntargaras@gmail.com">
+                <img class="mb-4" src="static/images/mail.png" alt="" width="30" height="30"/>
+            </a>
+            <a href="https://www.linkedin.com/in/antargaras"> 
+                <img class="mb-4" src="static/images/li_logo.png" alt="" width="30" height="30"/>
+            </a> 
+            
+        </p>
+    </div>
+
+    
+
+{% endblock %}

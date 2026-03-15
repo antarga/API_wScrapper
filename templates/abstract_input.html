@@ -1,0 +1,158 @@
+{% extends "base.html" %}
+
+
+{% block css %}
+
+    <style>
+        .btn {
+        background-color: #333538c9;
+        border: none;
+        color: white;
+        padding: 12px 42px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50px;
+        }
+
+        .btn:hover {
+        background-color: #333538c9;
+        border: none;
+        color: white;
+        padding: 12px 42px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        opacity: 0.8;
+        }
+
+        .model_ch {
+          width: 100%;
+          /* height: 100%; */
+          padding: 15px;
+          margin: auto;
+          
+        }
+
+        .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 50px;
+        }
+        
+        .form-control:focus {
+        z-index: 2;
+        }
+
+        input[type="file"]{
+            height:44px;
+            
+            }
+        input[type="file"]::-webkit-file-upload-button{
+            height:25px;
+            border-radius: 50px;
+            }
+
+        .bd-placeholder-img {
+          font-size: 1.125rem;
+          text-anchor: middle;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+        }
+
+        @media (min-width: 768px) {
+          .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+          }
+        }
+        
+        #loading{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .show{
+        display: block;
+        }
+
+        .fade-out{
+        opacity: 0;
+        }
+
+    </style>
+
+{% endblock %}
+    
+
+{% block content %}
+
+  <div class="container" id="container">
+    <div class="row justify-content-between">
+      <div class="col-sm-4">
+        <form class="model_ch" method="POST" action="{{ url_for('single_ab') }}" enctype="multipart/form-data">
+          <img class="mb-4" src="/static/images/text-icon-steel-blue-md_tr.png" alt="" width="200" height="200">
+          <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Paste un-pannotated abstract as plain text</h1>
+          <label for="mytext"></label>
+          <input type="text" id="mytext" name="abstract_text" class="form-control" placeholder="Paste text"required autofocus> 
+          <center>
+            <button class="mt-2 btn btn-lg btn-primary" type="submit">Upload</button>
+            <button class="mt-2 btn btn-lg btn-primary" type="reset">Reset</button>
+          </center>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <form class="model_ch" method="POST" action="{{ url_for('multi_abs') }}" enctype="multipart/form-data">
+          <img class="mb-4" src="/static/images/txt5.png" alt="" width="200" height="200">
+          <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Upload un-annotated abstract(s) as json file</h1>
+          <label for="myfile"></label>
+          <input type="file" id="myfile" name="abstracts_json" accept=".json" class="form-control" required autofocus> 
+          <center>
+            <button class="mt-2 btn btn-lg btn-primary" type="submit">Upload</button>
+            <button class="mt-2 btn btn-lg btn-primary" type="reset">Reset</button>
+          </center>
+        </form>
+      </div>
+      <div class="col-sm-4">
+        <form class="model_ch" method="POST" action="{{ url_for('stats') }}" enctype="multipart/form-data">
+          <img class="mb-4" src="/static/images/stats.png" alt="" width="200" height="200">
+          <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Upload self-annotated abstract(s) as txt file</h1>
+          <label for="myfile"></label>
+          <input type="file" id="myfile" name="abstracts_txt" accept=".txt" class="form-control" required autofocus> 
+          <center>
+            <button class="mt-2 btn btn-lg btn-primary" type="submit">Upload</button>
+            <button class="mt-2 btn btn-lg btn-primary" type="reset">Reset</button>
+          </center>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="loading">
+    <p><img src="static/images/ajax-loader.gif"/></p>
+  </div>
+
+  <script>
+    const form = document.getElementById('container');
+    const loader = document.getElementById('loading');
+
+    form.addEventListener('submit', (e) => {
+    form.classList.toggle('fade-out');
+    loader.classList.toggle('show');
+    });
+  </script>
+
+{% endblock %}

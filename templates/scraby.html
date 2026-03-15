@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <style>
+
+        .box {
+            background-color:#f6e9f700;
+            border:1px solid #e298ea00;
+        }
+
+        .btn {
+    
+            background-color: #333538c9;
+            border: none;
+            color: white;
+            padding: 12px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 50px;
+        }
+
+        .btn:hover {
+            background-color: #333538c9;
+            border: none;
+            color: white;
+            padding: 12px 42px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            opacity: 0.8;
+        }
+
+        .scraper_input {
+            width: 60%;
+            /* height: 100%; */
+            padding: 15px;
+            margin: auto;
+        }
+        
+        .form-control {
+            position: relative;
+            box-sizing: border-box;
+            height: auto;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 50px;
+            margin-bottom: 10px;
+        }
+        
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+        
+        #loading{
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .show{
+            display: block;
+        }
+
+        .fade-out{
+            opacity: 0;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+    
+    <div class="box" id="box">
+        <form class="scraper_input" method="POST" action="{{ url_for('run_scrapper') }}" enctype="multipart/form-data">
+          <img class="mb-4" src="/static/images/web_scraper.png" alt="" width="200" height="200">
+          <h1 class="h3 mb-3 font-weight-normal" style="color: white; margin-bottom:20px;">Input search keyword and the number of desired output</h1>
+          <input type="text" id="_KEYWORD" name="_KEYWORD" class="form-control" placeholder="Enter keyword" required autofocus> 
+          <input type="text" id="_NUM" name="_NUM" class="form-control" placeholder="Enter number" required autofocus> 
+          <center>
+            <button class="mt-2 btn btn-lg btn-primary" type="submit">Submit</button>
+            <button class="mt-2 btn btn-lg btn-primary" type="reset">Reset</button>
+          </center>
+        </form>
+      </div>
+
+      <div id="loading">
+        <p><img src="static/images/ajax-loader.gif"/></p>
+      </div>
+    
+      <script>
+        const form = document.getElementById('box');
+        const loader = document.getElementById('loading');
+    
+        form.addEventListener('submit', (e) => {
+        form.classList.toggle('fade-out');
+        loader.classList.toggle('show');
+        });
+      </script>
+
+{% endblock %}

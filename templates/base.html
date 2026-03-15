@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="author" content="Andreas Ntargaras">
+    <title>Sentence Classification API</title>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700">
+
+
+    <style type="text/css">
+        
+        html,body{
+            height:100%;
+            width: 100%;
+        }
+        
+        body { 
+            background: rgb(93, 129, 206) !important; 
+        } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+        
+        body {
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-align: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .custom-nav-container{
+            width: 100%;
+            padding-right: 0%;
+            padding-left: 0%;
+        }
+
+        .navbar-inverse {
+            border-radius: 0;
+        }
+
+        .navbar-header a{
+            color: white;
+            line-height: 2;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 25px;
+            font-weight: 700;
+            margin-left: 5px;
+            text-decoration: none;
+        }
+        
+        li a{
+            color: #c5bdbd !important;
+            font-weight: bold;
+        }
+
+        li a:hover{
+            color: white !important;
+        }
+
+        .navbar .navbar-nav .nav-link:hover {
+            color: white;
+        }
+        
+        /* Below start the code for the slowly appearing underbar */
+        @media only screen and (min-width: 960px) {
+            .navbar .navbar-nav .nav-link {
+                padding: 1em 0.7em;
+            }
+            .navbar {
+                padding: 0;
+            }
+            .navbar .navbar-brand {
+                padding: 0 0.7em;
+            }
+        }
+
+        .navbar .navbar-nav .nav-link {
+        position: relative;
+        }
+
+        .navbar .navbar-nav .nav-link::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: white;
+        color: transparent;
+        width: 0%;
+        content: '';
+        height: 3px;
+        transition: all 0.5s;
+        }
+
+        .navbar .navbar-nav .nav-link:hover::after {
+        width: 80%;  /* maybe 50% */
+        }
+
+        .active{
+            color: white !important;
+        }
+
+        /* To hide the flash messages */
+        #dissapearing_flash {
+            -moz-animation: cssAnimation 0s ease-in 5s forwards;
+            /* Firefox */
+            -webkit-animation: cssAnimation 0s ease-in 5s forwards;
+            /* Safari and Chrome */
+            -o-animation: cssAnimation 0s ease-in 5s forwards;
+            /* Opera */
+            animation: cssAnimation 0s ease-in 5s forwards;
+            -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes cssAnimation {
+            to {
+                width:0;
+                height:0;
+                overflow:hidden;
+            }
+        }
+
+        @-webkit-keyframes cssAnimation {
+            to {
+                width:0;
+                height:0;
+                visibility:hidden;
+            }
+        }
+
+        #dissapearing_flash ul {
+            background-color: #333538c9;
+            color: white;
+            padding: 12px;
+            text-align: center;
+            list-style: none;
+            height: auto;
+            width: auto;
+            border-radius: 50px;
+        }
+        
+        #dissapearing_flash ul li {
+            padding: 10px;
+        }
+    </style>
+
+    {% block css %}{% endblock %}
+
+</head>
+
+<body class=text-center>
+
+    <div class="container-fluid custom-nav-container">
+        <nav class="navbar navbar-inverse">
+            <div class="navbar-header">
+                <button type="button" class ="navbar-toggle" data-toggle="collapse" data-target="#nav">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>  
+                    <span class="icon-bar"></span>  
+                    <span class="icon-bar"></span>  
+                </button>
+                <a class="navbar-left"> 3A </a>
+            </div>
+
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('index') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('rhesextra') }}">RheSExtra</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('scraby') }}">ScrAby</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+
+
+    <div class="content">
+        {% block content %}{% endblock %}
+
+    </div>
+    
+    <div id=dissapearing_flash>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class=flashes>
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+    </div>
+
+    <div class="footer">
+        {% block footer %}
+        <p class="mt-5 mb-3" style="color: white;">&copy; 2021</p>
+        {% endblock %}
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script>
+        // For adding the active state to the navbar items
+        const currentLocation = location.href;
+        const menuItem = document.querySelectorAll('.nav-link');
+        const menuLength = menuItem.length;
+
+        for(let i =0; i< menuLength; i++){
+            if (menuItem[i].href === currentLocation){
+                menuItem[i].className = "active"
+            }
+        }
+    </script>
+
+</body>
+
+</html>

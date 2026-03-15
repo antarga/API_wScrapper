@@ -1,0 +1,129 @@
+{% extends "base.html" %}
+
+{% block css %}
+    <style>
+        .btn {
+        position: relative;
+        background-color: #333538c9;
+        border: none;
+        color: white;
+        padding: 12px 42px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 50px;
+        transition: .5s;
+        }
+
+        .btn:hover {
+        background-color: #333538c9;
+        border: none;
+        color: white;
+        padding: 12px 42px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        opacity: 0.8;
+        }
+        
+        #radio_buttons {
+            border-radius: 25px;
+            /* border: 2px solid #c94258; */
+            background-color: #333538c9;
+            color: white;
+            padding: 10px; 
+            width: auto;
+            height: auto;  
+        }
+
+        .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        form{
+        text-align: center;
+        transition: opacity 0.6s ease-out;
+        }
+
+        #loading{
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        }
+
+        .show{
+        display: block;
+        }
+
+        .fade-out{
+        opacity: 0;
+        }
+
+    </style>
+
+{% endblock %}
+
+{% block content %}
+
+    <form class="model_ch" id="model_ch" method="POST" action="{{ url_for('model_choice') }}" enctype="multipart/form-data">
+        <img class="mb-4" src="static/images/logo.png" alt="" width="300" height="150">
+        <h1 class="h3 mb-3 font-weight-normal" style="color: white;">Please select a model</h1>
+        <label for="model_choice"></label>
+        <!-- <select id="model_choice" name="model">
+            <option value="pubmed-20k">20K model with 5 classes</option>
+            <option value="pubmed-200k">200K model with 5 classes</option>
+            <option value="d7class">100K model with 7 classes</option>
+        </select> -->
+        <div id="radio_buttons">
+            <label class="radio-inline">
+                <input type="radio" name="model" id="model_choice" value="pubmed-20k" checked="checked"> 20K model with 5 classes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="model" id="model_choice" value="pubmed-200k"> 200K model with 5 classes
+            </label>
+            <label class="radio-inline">
+                <input type="radio" name="model" id="model_choice" value="d7class"> 100K model with 7 classes
+            </label>
+        </div>
+        <center>
+            <button class="mt-2 btn btn-lg btn-primary" type="submit" onclick>
+                <span class="button_txt">Load</span>
+            </button>
+        </center>
+    </form>
+
+    <div id="loading">
+        <p><img src="static/images/ajax-loader.gif"/></p>
+    </div>
+
+    <script>
+        const form = document.getElementById('model_ch');
+        const loader = document.getElementById('loading');
+
+        form.addEventListener('submit', (e) => {
+        form.classList.toggle('fade-out');
+        loader.classList.toggle('show');
+        });
+    </script>
+
+
+{% endblock %}
